@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Оформление заказа — AutoParts</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header" id="header">
+      <div class="container header__inner">
+        <a href="index.html" class="logo"
+          ><span class="logo__icon">⚙</span
+          ><span class="logo__text">AUTO<span>PARTS</span></span></a
+        >
+        <div class="header__actions">
+          <a href="cart.html" class="action-btn"
+            ><svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <circle cx="9" cy="21" r="1" />
+              <circle cx="20" cy="21" r="1" />
+              <path
+                d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"
+              /></svg
+            ><span class="action-badge" id="cart-count">0</span></a
+          >
+        </div>
+      </div>
+    </header>
+
+    <div class="page-header">
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="index.html">Главная</a><span>/</span
+          ><a href="cart.html">Корзина</a><span>/</span
+          ><span style="color: var(--white)">Оформление</span>
+        </div>
+        <h1 class="page-header__title">Оформление заказа</h1>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="checkout-layout">
+        <form id="checkout-form">
+          <div class="form-card">
+            <div class="form-card__title"><span>1</span> Данные получателя</div>
+            <div class="form-grid">
+              <div class="form-group">
+                <label class="form-label">Имя *</label>
+                <input
+                  type="text"
+                  class="form-input"
+                  placeholder="Ваше имя"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Телефон *</label>
+                <input
+                  type="tel"
+                  class="form-input"
+                  placeholder="+996 700 000 000"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Email</label>
+                <input
+                  type="email"
+                  class="form-input"
+                  placeholder="email@example.com"
+                />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Город *</label>
+                <input
+                  type="text"
+                  class="form-input"
+                  placeholder="Бишкек"
+                  required
+                />
+              </div>
+              <div class="form-group form-group--full">
+                <label class="form-label">Адрес доставки *</label>
+                <input
+                  type="text"
+                  class="form-input"
+                  placeholder="Улица, дом, квартира"
+                  required
+                />
+              </div>
+              <div class="form-group form-group--full">
+                <label class="form-label">Комментарий к заказу</label>
+                <textarea
+                  class="form-textarea"
+                  placeholder="Дополнительные пожелания..."
+                ></textarea>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-card">
+            <div class="form-card__title"><span>2</span> Способ оплаты</div>
+            <div class="payment-options">
+              <div class="payment-option selected">
+                <input type="radio" name="payment" id="pay-card" checked />
+                <span>💳</span>
+                <label for="pay-card"
+                  >Картой онлайн (Visa, Mastercard, Элкарт)</label
+                >
+              </div>
+              <div class="payment-option">
+                <input type="radio" name="payment" id="pay-cash" />
+                <span>💵</span>
+                <label for="pay-cash">Наличными при получении</label>
+              </div>
+              <div class="payment-option">
+                <input type="radio" name="payment" id="pay-transfer" />
+                <span>📱</span>
+                <label for="pay-transfer">Мбанк / О!Деньги</label>
+              </div>
+            </div>
+          </div>
+
+          <button
+            type="submit"
+            class="btn btn--primary btn--full btn--lg"
+            style="font-size: 18px; padding: 20px"
+          >
+            ✅ Оформить заказ
+          </button>
+          <a
+            href="cart.html"
+            style="
+              display: block;
+              text-align: center;
+              margin-top: 12px;
+              font-size: 14px;
+              color: var(--mid);
+            "
+            >← Вернуться в корзину</a
+          >
+        </form>
+
+        <div>
+          <div class="cart-summary">
+            <div class="cart-summary__title">Ваш заказ</div>
+            <div id="checkout-summary"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="toast" id="toast"></div>
+    <script src="app.js"></script>
+  </body>
+</html>

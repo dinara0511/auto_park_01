@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Заказ оформлен — AutoParts</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header" id="header">
+      <div class="container header__inner">
+        <a href="index.html" class="logo"
+          ><span class="logo__icon">⚙</span
+          ><span class="logo__text">AUTO<span>PARTS</span></span></a
+        >
+      </div>
+    </header>
+
+    <div class="thanks-page">
+      <div class="thanks-card">
+        <div class="thanks-icon">🎉</div>
+        <div class="thanks-title">Спасибо!</div>
+        <p style="font-size: 16px; color: var(--mid); margin-bottom: 16px">
+          Ваш заказ успешно оформлен
+        </p>
+        <div class="thanks-order">
+          Номер вашего заказа<br />
+          <strong id="order-number">AP-000000</strong>
+        </div>
+        <p style="font-size: 14px; color: var(--mid); margin-bottom: 24px">
+          Мы свяжемся с вами в ближайшее время для подтверждения
+        </p>
+        <div
+          style="
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+          "
+        >
+          <a href="index.html" class="btn btn--primary">На главную</a>
+          <a href="catalog.html" class="btn btn--ghost">В каталог</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="toast" id="toast"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
